@@ -1,73 +1,63 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Benefits from './components/Benefits';
+import ParallaxShowcase from './components/ParallaxShowcase';
+import Footer from './components/Footer';
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+    <div className="relative min-h-screen bg-white text-slate-900">
+      <Navbar />
+      <Hero />
+      <Benefits />
+      <ParallaxShowcase />
 
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
+      <section id="ritual" className="py-28 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-10 items-center">
+            <div className="lg:col-span-2">
+              <div className="relative rounded-3xl bg-gradient-to-br from-fuchsia-100 via-indigo-100 to-white p-1">
+                <div className="rounded-[20px] bg-white p-8 ring-1 ring-slate-200">
+                  <h2 className="text-3xl font-semibold tracking-tight">Your two-step ritual</h2>
+                  <ol className="mt-6 space-y-4 text-slate-700">
+                    <li><span className="font-medium text-slate-900">1. Cleanse:</span> Massage two pumps into damp skin, rinse with cool water.</li>
+                    <li><span className="font-medium text-slate-900">2. Treat + seal:</span> Apply 3-4 drops of serum, follow with moisturizer to lock in hydration.</li>
+                  </ol>
+                </div>
               </div>
             </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
+            <div>
+              <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+                <h3 className="font-semibold text-slate-900">Real results</h3>
+                <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                  <li>• 92% saw improved hydration in 2 weeks</li>
+                  <li>• 87% reported calmer skin</li>
+                  <li>• 78% noticed refined texture</li>
+                </ul>
               </div>
             </div>
-          </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section id="shop" className="py-24 bg-gradient-to-b from-white to-indigo-50/60">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl bg-slate-900 text-white p-10 sm:p-14 overflow-hidden relative">
+            <div className="absolute inset-0 bg-[radial-gradient(600px_200px_at_100%_0%,rgba(216,180,254,0.15),transparent_60%)]" />
+            <div className="relative">
+              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">Elevate your routine</h2>
+              <p className="mt-3 text-white/80 max-w-2xl">Thoughtful formulas that do more with less. Discover balanced care designed for everyday skin.</p>
+              <div className="mt-8">
+                <a href="#" className="inline-flex rounded-full bg-white px-6 py-3 text-slate-900 text-sm font-medium shadow hover:bg-slate-100 transition">Explore products</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
